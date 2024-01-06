@@ -1,0 +1,37 @@
+html {
+    background-color: gainsboro;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.header {
+    padding: 5vh;
+}
+
+.grid-container {
+    width: 50vw;
+    height: 50vw;
+    display: grid;
+    border: 2px solid black;
+}
+
+.grid-item {
+    border: 1px solid gray;
+    background-color: white;
+}
+
+.controls {
+    margin-top: 10px;
+}
