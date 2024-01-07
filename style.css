@@ -1,5 +1,5 @@
 html {
-    background-color: gainsboro;
+    background-color: #dcdcdc;
     text-align: center;
 }
 
@@ -28,8 +28,12 @@ html {
 }
 
 .grid-item {
-    border: 1px solid gray;
+    border: 1px solid #dcdcdc66;
     background-color: white;
+}
+
+.grid-tem-hover {
+    background-color: black;
 }
 
 .controls {

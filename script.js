@@ -5,8 +5,14 @@ document.addEventListener('DOMContentLoaded', function () {
         for(let i = 0; i < size * size; i++) {
             const gridItem = document.createElement('div');
             gridItem.classList.add('grid-item');
+
+            gridItem.addEventListener('mouseover', function () {
+                gridItem.style.backgroundColor = 'black';
+            });
+
             gridContainer.appendChild(gridItem);
         }
+
     gridContainer.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
     }
 
