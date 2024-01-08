@@ -13,21 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let rainbow = false;
     let eraser = false;
 
-    blackBtn.onclick = () => {
-        black = true;
-        rainbow = false;
-        eraser = false;
-    }
-    rainbowBtn.onclick = () =>{
-        black = false;
-        rainbow = true;
-        eraser = false;
-    }
-    eraserBtn.onclick = () => {
-        black = false;
-        rainbow = false;
-        eraser = true;
-    }
+    
 
     function clearGrid() {
         const gridItems = document.querySelectorAll('.grid-item');
@@ -59,11 +45,35 @@ document.addEventListener('DOMContentLoaded', function () {
             gridContainer.appendChild(gridItem);
         }
 
-    gridContainer.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+        gridContainer.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
     }
 
-    
+    function changeColor(color){
+        black = false;
+        rainbow = false;
+        eraser = false;
 
+        blackBtn.classList.remove('selected');
+        rainbowBtn.classList.remove('selected');
+        eraserBtn.classList.remove('selected');
+    
+        if (color === 'black') {
+            black = true;
+            blackBtn.classList.add('selected');
+        } else if (color === 'rainbow') {
+            rainbow = true;
+            rainbowBtn.classList.add('selected');
+        } else if (color === 'eraser') {
+            eraser = true;
+            eraserBtn.classList.add('selected');
+        }
+    }
+    
+    
+    blackBtn.onclick = () => changeColor("black")
+    rainbowBtn.onclick = () => changeColor("rainbow")
+    eraserBtn.onclick = () => changeColor("eraser")
+    
     clearButton.onclick = () => clearGrid();
 
     updateGrid(defaultSize);

@@ -1,5 +1,5 @@
 html {
-    background-color: #dcdcdc;
+    background-color: #EF233C;
     text-align: center;
 }
 
@@ -7,7 +7,14 @@ html {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
+    color: #edf2f4;
+    font-family: sans-serif;
     /* border: 2px solid red; */
+}
+
+button{
+    background-color: #2b2d42;
+    border-radius: 20px;
 }
 
 .container {
@@ -21,6 +28,12 @@ html {
     flex-direction: column;
     
     margin-top: 10px;
+}
+.controls button{
+   margin: 10px
+}
+.selected{
+    background-color: #8D99AE;
 }
 
 .header {
