@@ -7,13 +7,20 @@ html {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
+    /* border: 2px solid red; */
 }
 
 .container {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    height: 100vh;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    
+    margin-top: 10px;
 }
 
 .header {
@@ -36,6 +43,4 @@ html {
     background-color: black;
 }
 
-.controls {
-    margin-top: 10px;
-}
+
